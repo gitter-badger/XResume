@@ -11,7 +11,7 @@ elementFormDefault="qualified">
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="name" type="personName"/>
-						<xs:element name="contactInformation" minOccurs="1" maxOccurs="5">
+						<xs:element name="contactInformation" type="contactInformation" minOccurs="1" maxOccurs="5">
 							
 						</xs:element>
 					</xs:sequence>
@@ -21,7 +21,7 @@ elementFormDefault="qualified">
 	</xs:complexType>
 </xs:element>
 
-<!-- Types -->
+<!-- Base Types -->
 <xs:complexType name="personName">
 	<xs:simpleContent>
 		<xs:extension base="xs:string">
@@ -32,6 +32,16 @@ elementFormDefault="qualified">
 	</xs:simpleContent>
 </xs:complexType>
 
+<xs:complexType name="phoneNumber">
 	
+</xs:complexType>
+
+<!-- Aggregates -->
+<xs:complexType name="contactInformation">
+	<xs:sequence>
+		<xs:element name="phoneNumber" type="phoneNumber"/>
+	</xs:sequence>
+</xs:complexType>
+
 
 </xs:schema>

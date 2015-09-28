@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<resume 
+xmlns="https://github.com/IME-SE8/XResume" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://github.com/IME-SE8/XResume XResume.xsd">
+	
+	<personalInformation>
+		<name first="John" last="Doe" short="Doe J.">John Doe</name>
+		<contactInformation>
+			<phoneNumber>+1 (999) 99999-9999</phoneNumber>
+			<address></address>
+		</contactInformation>
+	</personalInformation>
+	
+</resume>
