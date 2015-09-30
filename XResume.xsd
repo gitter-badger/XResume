@@ -7,22 +7,14 @@ elementFormDefault="qualified">
 <xs:element name="resume">
 	<xs:complexType>
 		<xs:sequence>
-			<xs:element name="personalInformation">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="name" type="personName"/>
-						<xs:element name="contactInformation" type="contactInformation" minOccurs="1" maxOccurs="5">
-							
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
+			<xs:element name="personalInformation" type="personalInformationType" />
+			<xs:element name="education" type="educationType" />
 		</xs:sequence>
 	</xs:complexType>
 </xs:element>
 
 <!-- Base Types -->
-<xs:complexType name="personName">
+<xs:complexType name="personNameType">
 	<xs:simpleContent>
 		<xs:extension base="xs:string">
 			<xs:attribute name="first" type="xs:string"/>
@@ -32,16 +24,20 @@ elementFormDefault="qualified">
 	</xs:simpleContent>
 </xs:complexType>
 
-<xs:complexType name="phoneNumber">
+<xs:complexType name="phoneNumberType">
 	
 </xs:complexType>
 
 <!-- Aggregates -->
-<xs:complexType name="contactInformation">
+<xs:complexType name="contactInformationType">
 	<xs:sequence>
-		<xs:element name="phoneNumber" type="phoneNumber"/>
+		<xs:element name="phoneNumber" type="phoneNumberType"/>
+		<xs:element name="email" type="emailType" />
 	</xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="personalInformationType">
+	
+</xs:complexType>
 
 </xs:schema>
