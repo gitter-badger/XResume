@@ -10,14 +10,15 @@ elementFormDefault="qualified">
 			<xs:element name="personalInformation" type="personalInformationType" />
 			<xs:element name="interests" type="interestsListType" />
 			<xs:element name="education" type="educationType" />
+			<xs:element name="skills" type="skillsListType" />
 			<xs:element name="experiences" type="experiencesListType" />
-			<xs:element name="internships" type="internshipsListType" />
 			<xs:element name="projects" type="projectsListType" />
 			<xs:element name="awards" type="awardsListType" />
 		</xs:sequence>
 	</xs:complexType>
 </xs:element>
 
+<!-- Personal Information -->
 <xs:complexType name="personalInformationType">
 	<xs:sequence>
 		<xs:element name="name" type="personNameType" />
@@ -35,36 +36,42 @@ elementFormDefault="qualified">
 	<xs:attribute name="type" type="xs:string" />
 </xs:complexType>
 
+<!-- Interests -->
 <xs:complexType name="interestsListType">
 	<xs:sequence>
 		<xs:element name="interest" type="xs:string" maxOccurs="10" />
 	</xs:sequence>
 </xs:complexType>
 
+<!-- Education -->
 <xs:complexType name="educationType">
 	<xs:sequence>
 		
 	</xs:sequence>
 </xs:complexType>
 
+<!-- Skills -->
+<xs:complexType name="skillsListType">
+	<xs:sequence>
+		
+	</xs:sequence>
+</xs:complexType>
+
+<!-- Experience -->
 <xs:complexType name="experiencesListType">
 	<xs:sequence>
 		
 	</xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="internshipsListType">
-	<xs:sequence>
-		
-	</xs:sequence>
-</xs:complexType>
-
+<!-- Projects -->
 <xs:complexType name="projectsListType">
 	<xs:sequence>
 		
 	</xs:sequence>
 </xs:complexType>
 
+<!-- Awards -->
 <xs:complexType name="awardsListType">
 	<xs:sequence>
 		
