@@ -8,10 +8,68 @@ elementFormDefault="qualified">
 	<xs:complexType>
 		<xs:sequence>
 			<xs:element name="personalInformation" type="personalInformationType" />
+			<xs:element name="interests" type="interestsListType" />
 			<xs:element name="education" type="educationType" />
+			<xs:element name="experiences" type="experiencesListType" />
+			<xs:element name="internships" type="internshipsListType" />
+			<xs:element name="projects" type="projectsListType" />
+			<xs:element name="awards" type="awardsListType" />
 		</xs:sequence>
 	</xs:complexType>
 </xs:element>
+
+<xs:complexType name="personalInformationType">
+	<xs:sequence>
+		<xs:element name="name" type="personNameType" />
+		<xs:element name="contact" type="contactInformationType" maxOccurs="3" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="contactInformationType">
+	<xs:sequence>
+		<xs:element name="organization" type="xs:string" minOccurs="0" />
+		<xs:element name="address" type="xs:string" />
+		<xs:element name="phoneNumber" type="xs:string"/>
+		<xs:element name="email" type="xs:string" />
+	</xs:sequence>
+	<xs:attribute name="type" type="xs:string" />
+</xs:complexType>
+
+<xs:complexType name="interestsListType">
+	<xs:sequence>
+		<xs:element name="interest" type="xs:string" maxOccurs="10" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="educationType">
+	<xs:sequence>
+		
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="experiencesListType">
+	<xs:sequence>
+		
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="internshipsListType">
+	<xs:sequence>
+		
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="projectsListType">
+	<xs:sequence>
+		
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="awardsListType">
+	<xs:sequence>
+		
+	</xs:sequence>
+</xs:complexType>
 
 <!-- Base Types -->
 <xs:complexType name="personNameType">
@@ -24,20 +82,6 @@ elementFormDefault="qualified">
 	</xs:simpleContent>
 </xs:complexType>
 
-<xs:complexType name="phoneNumberType">
-	
-</xs:complexType>
 
-<!-- Aggregates -->
-<xs:complexType name="contactInformationType">
-	<xs:sequence>
-		<xs:element name="phoneNumber" type="phoneNumberType"/>
-		<xs:element name="email" type="emailType" />
-	</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="personalInformationType">
-	
-</xs:complexType>
 
 </xs:schema>
