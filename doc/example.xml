@@ -1,15 +1,43 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl"
+href="https://github.com/IME-SE8/XResume/master/XResume.xsl"?>
 <resume 
 xmlns="https://github.com/IME-SE8/XResume" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="https://github.com/IME-SE8/XResume XResume.xsd">
-	
+
 	<personalInformation>
-		<name first="John" last="Doe" short="Doe J.">John Doe</name>
-		<contactInformation>
-			<phoneNumber>+1 (999) 99999-9999</phoneNumber>
-			<address></address>
-		</contactInformation>
+		<name first="Victor" last="Chaves" shortForm="Victor Villas">Victor Villas Boas Chaves</name>
+		<contact type="institutional">
+			<organization>Rose-Hulman Institute of Technology</organization>
+			<address>5500 Wabash Ave., Terre Haute, IN 47803-3999</address>
+			<phoneNumber>+1 (812) 645-1199</phoneNumber>
+			<email>villasv@rose-hulman.edu</email>
+		</contact>
+		<contact type="personal">
+			<organization>Instituto Militar de Engenharia</organization>
+			<address>Pca. Gen. Tiburcio 80, Rio de Janeiro, RJ 22290-270</address>
+			<phoneNumber>+55 (21) 98676-0059</phoneNumber>
+			<email>villasv@outlook.com</email>
+		</contact>
 	</personalInformation>
+
+
+	<interests>
+		<interest>databases</interest>
+		<interest>software development</interest>
+		<interest>optimization</interest>
+		<interest>natural language processing</interest>
+	</interests>
+
+	<education></education>
+	
+	<skills></skills>
+	
+	<experiences></experiences>
+	
+	<projects></projects>
+	
+	<awards></awards>
 	
 </resume>
