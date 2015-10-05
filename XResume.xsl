@@ -14,12 +14,19 @@ xpath-default-namespace="https://github.com/IME-SE8/XResume">
   <title><xsl:value-of select="resume/personalInformation/name/attribute::shortForm" /> Website</title>
 </head>
 <body>
+  <xsl:apply-templates />
+</body>
+</html>
+
+</xsl:template>
+
+<xsl:template match="resume">
   <div class="resume">
     
     <div class="header">
-      <div class="name"><xsl:value-of select="resume/personalInformation/name" /></div>
+      <div class="name"><xsl:value-of select="personalInformation/name" /></div>
       <div class="contacts">
-        <xsl:for-each select="resume/personalInformation/contact">
+        <xsl:for-each select="personalInformation/contact">
           <div class="contactInformation">
             <p><xsl:value-of select="organization" /></p>
             <p><xsl:value-of select="address" /></p>
@@ -31,12 +38,22 @@ xpath-default-namespace="https://github.com/IME-SE8/XResume">
     </div>
     
     <div class="sections">
-      <xsl:apply-templates/>
+      <xsl:apply-templates />
     </div>
   </div>
-</body>
-</html>
-
 </xsl:template>
+
+
+<xsl:template match="interests">
+  
+</xsl:template>
+<xsl:template match="education"></xsl:template>
+<xsl:template match="skills"></xsl:template>
+<xsl:template match="experiences"></xsl:template>
+<xsl:template match="projects"></xsl:template>
+<xsl:template match="awards"></xsl:template>
+
+<xsl:template match="*"/> 
+
 
 </xsl:stylesheet>
